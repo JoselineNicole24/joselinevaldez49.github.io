@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiCake</title>
+    <style>
+        body {
+            font-family: Bold;
+            background-color: #f4f4f4;
+            margin: 2rem;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #c942badf;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+        }
+        section {
+            margin: 2rem;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #0a090a;
+        }
+        .hidden {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #e05bef;
+            color: white;
+            position: fixed;
+            bottom: 1;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Tema General: <span id="topicTitle">El impacto del cambio tecnológico en la sociedad</span></h1>
+</header>
+
+<nav>
+    <a href="#" onclick="showSection('section1')">Tema 1: Impacto tecnologico</a>
+    <a href="#" onclick="showSection('section2')">Tema 2: Beneficios tecnologicos</a>
+    <a href="#" onclick="showSection('section3')">Tema 3: conclusió</a>
+</nav>
+
+<section id="section1" class="active">
+    <h2>Tema 1: El impacto del cambio tecnológico en la sociedad</h2>
+    <br>La tecnología ha tenido un profundo impacto en la sociedad. Por una parte,
+         la tecnología ha generado mejoras significativas en la atención médica, 
+         el transporte, la comunicación y otras áreas.
+          Los avances en la tecnología médica han llevado a una mayor esperanza
+           de vida y una mejor calidad de esta para muchas personas.La tecnología 
+           ha tenido un profundo impacto en la sociedad. Por una parte, la tecnología 
+           ha generado mejoras significativas en la atención médica, el transporte, 
+           la comunicación y otras áreas. Los avances en la tecnología médica han llevado a 
+           una mayor esperanza de vida y una mejor calidad de esta para muchas personas La influencia de
+            la tecnología se ha extendido a todos los ámbitos de nuestras vidas; influye en nuestras relaciones,
+             en nuestro trabajo, en cada uno de nuestros gestos diarios, y, como no podía ser de otro modo, también 
+             ha llegado al mundo de la educación. Es innegable el fuerte impacto que ha tenido la tecnología en la evolución del
+     conocimiento, ofreciendo nuevas formas de acceso a la información, y posibilitando al mismo tiempo el desarrollo de 
+        auténticas revoluciones pedagógicas a través de la creación de métodos instruccionales completamente novedosos
+        Otro riesgo importante de la tecnología es la dependencia. Las personas pueden volverse dependientes de la tecnología, 
+        lo que puede afectar su capacidad para llevar a cabo tareas sin ella. La dependencia de la tecnología también puede tener
+         un impacto negativo en la salud mental, lo que puede llevar a la ansiedad y la depresión. Es importante utilizar la tecnología 
+         de manera responsable y no depender exclusivamente de ella. Además, la tecnología puede tener un impacto en el medio ambiente.
+          La fabricación y el uso de dispositivos electrónicos pueden generar una gran cantidad de residuos electrónicos y contribuir al 
+          cambio climático. Es importante considerar la sostenibilidad al utilizar y desechar los dispositivos electrónicos.
+          Para maximizar los beneficios de la tecnología y abordar sus riesgos, es esencial que las empresas, los gobiernos y los individuos
+           adopten un enfoque responsable en su uso. Esto incluye la implementación de medidas de seguridad adecuadas, el uso responsable de la tecnología, 
+           la consideración de la sostenibilidad y de la Cultura Ecodigital. Es importante recordar que la tecnología es una herramienta y que su uso responsable
+            es fundamental para maximizar sus beneficios y minimizar sus impactos negativos.Los equipos de telecomunicación, a través de los cuales se transmite la
+             información, han ido evolucionando y formando parte importante de nuestra vida cotidiana, pasamos del telégrafo a WhatsApp y de la televisión en blanco 
+             y negro, que merecía su propio espacio, a celulares o tablets de alta resolución que pueden llevarse hasta al baño. Pero los aparatos tecnológicos no solamente
+              aportan un valor práctico, sino estético y simbólico que nos llevan a elegir entre un sinfín de opciones: no sólo el más eficiente, sino el más lindo, el de mejor 
+              diseño o el que me otorga mayor estatus.</br>
+    </section>
+</br>
+<TD><IMG src="C:\Users\MINEDUCYT\Documents\VS Code\como_afecta_la_tecnologia_al_medio_ambiente_1205_orig.jpg" width="500" height="300"></TD>
+<section id="section2" class="hidden">
+    <h2>Beneficios del cambio tecnológico
+
+        Son numerosas las ventajas de los cambios tecnológicos para la humanidad. Éstas son algunas de ellas:
+        Aumento en la eficiencia y en la productividadOpción de trabajo remoto Conectividad entre personas sin importar
+         su ubicación Aprendizaje continuo y Mayor acceso a la información</p>
+</section>
+<section id="section3" class="hidden">
+    <h2>En conclusió La tecnología puede mejorar la eficiencia en el lugar de trabajo y en la vida diaria,
+         lo que puede llevar a un ahorro de tiempo y recursos. Además, la tecnología puede mejorar la educación, 
+         la salud y la calidad de vida de las personas</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Página de Exposición de Tema</p>
+</footer>
+
+<script>
+    function showSection(sectionId) {
+        // Ocultar todas las secciones
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            section.classList.remove('active');
+            section.classList.add('hidden');
+        });
+
+        // Mostrar la sección seleccionada
+        const selectedSection = document.getElementById(sectionId);
+        selectedSection.classList.remove('hidden');
+        selectedSection.classList
